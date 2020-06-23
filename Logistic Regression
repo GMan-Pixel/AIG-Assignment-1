@@ -1,0 +1,14 @@
+Regularized Logistic Regression
+Regularized Logistic Regression using CSV, DataFrames, Plots readFrom = CSV.read("C:\Users\FLAVIANUS UUKULE\Downloads\bank.csv") readFrom2 = convert(Matrix,readFrom)
+size(readFrom2)[2] for a = 1:(size(readFrom2)[2]-2) newdata = newdata(readFrom2[:, a]) for b = 1:(size(readFrom2)[1] for c = 1: size(newdata)[1] if readFrom2[b,a] == newdata[c] readFrom[b,a] = Int(k) end end end end
+B = readFrom2[:, end-2:end] d = fill(1, size(readFrom2)[1]) for i = 1:size(B)[1] end
+rundata = readFrom2[:,1:end-2] //rundata = concluded testing = readFrom2[:, end-2]+readFrom2[:,end-1]+readFrom[:, end] //testing = testst
+training_data = rundata[1:endwith,:] t_value = d[1:endwith] bias = fill(1, endwith) training_data = hcat(training_data,bias) training_data = training_data./maximum(training_data)
+coefficients = fill(0.0, length(training_data)[2]) x_val = transpose(training_data) .- transpose(t_value)
+function get_z(coefficients, x_val) z = transpose(coefficients)*x_val print z end
+function predict(z) z = transpose(coefficients)*x_val
+end probability = 1/(1+ exp(z))
+if probability <= 0.5 class = 0 else class = 1
+println(class) return probability end
+function Update(iterations, training_data) coefficients = fill(0.0, length(training_data)[2]) learnRate = 0.4 lambda = 1 a = iterations m = size(trainingData,1) for i = 1: iterations
+d = transpose(coefficients)(transpose(training_data) .- transpose(t_value)) theetaa2 = ((coefficients) .- learnRate/m . (transpose(training_data)transpose(d) .+ lambda.(coefficients))) end
